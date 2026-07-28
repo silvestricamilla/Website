@@ -46,11 +46,33 @@ a:hover { border-color: var(--teal); color: var(--oxblood); }
   padding: 0 28px;
 }
 
+/* ---------- Institution bar ---------- */
+
+.institution-bar {
+  padding: 22px 0 0;
+}
+
+.institution-logo {
+  height: 34px;
+  width: auto;
+  display: block;
+  /* If your logo file has a colored background, remove filter below */
+  filter: grayscale(100%);
+  opacity: 0.85;
+}
+
 /* ---------- Header ---------- */
 
 header.masthead {
-  padding: 64px 0 28px;
+  padding: 28px 0 28px;
   border-bottom: 1px solid var(--rule);
+}
+
+.masthead-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
 }
 
 .masthead .name {
@@ -67,6 +89,15 @@ header.masthead {
   color: var(--ink-soft);
   text-transform: uppercase;
   letter-spacing: 0.06em;
+}
+
+.portrait {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid var(--rule);
+  flex-shrink: 0;
 }
 
 nav.toc {
@@ -238,6 +269,8 @@ footer {
   .masthead .name { font-size: 2rem; }
   .abstract { font-size: 1.05rem; }
   nav.toc { gap: 14px; }
+  .masthead-top { flex-direction: column-reverse; }
+  .portrait { width: 76px; height: 76px; }
 }
 
 /* ---------- Accessibility ---------- */
